@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/icons/retromariofavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -48,11 +49,17 @@
     function clickShow() {
         form.style.left = "765px"
         mask.style.visibility = "visible"
+        if (window.innerWidth < 900) {
+                form.style.left = "50%";
+                form.style.transform = "translateX(-50%)";
+                mask.style.visibility = "visible";
+            }
     }
 
     function goneForm() {
         form.style.left = "-320px"
         mask.style.visibility = "hidden"
+        
     }
 
 </script>
